@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "2550624548",
+    "firebase_url": "https://sfera-25fd4.firebaseio.com",
+    "project_id": "sfera-25fd4",
+    "storage_bucket": "sfera-25fd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2550624548:android:aa0d2e706a40999d",
+        "android_client_info": {
+          "package_name": "ru.club.sfera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2550624548-96fk48km35lh2br3etfh5pg9253jbdaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoYLPDsX0v2hYRLvLuS29qHAMSf71o0Gk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
