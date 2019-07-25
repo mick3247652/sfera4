@@ -448,6 +448,7 @@
     <string name="label_post_to_followers">Участники</string>
     <string name="label_post_to_public">Для всех</string>
     <string name="label_followers">участников</string>
+    <string name="label_followers2">участники</string>
     <string name="label_followings">читаемых</string>
     <string name="settings_notifications_followers">Читателей</string>
     <string name="title_activity_hashtags">Хештегов</string>

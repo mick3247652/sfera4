@@ -126,7 +126,7 @@ public class MenuFragment extends Fragment implements Constants {
             public void onClick(View view) {
 
                 Intent i = new Intent(getActivity(), WebViewActivity.class);
-                i.putExtra("url", "https://sefon.cc");
+                i.putExtra("url", "https://muzofond.fm");
                 i.putExtra("title", getActivity().getResources().getString(R.string.nav_music));
                 getActivity().startActivity(i);
             }

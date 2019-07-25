@@ -137,7 +137,7 @@
                                 android:layout_width="@dimen/spacing_mlarge"
                                 android:layout_height="@dimen/spacing_mlarge"
                                 android:src="@drawable/ic_time"
-                                android:tint="@color/colorPrimaryTint"
+                                android:tint="@color/black"
                                 android:visibility="visible" />
 
                             <View
@@ -178,7 +178,7 @@
                                 android:id="@+id/access_mode_image"
                                 android:layout_width="@dimen/spacing_mlarge"
                                 android:layout_height="@dimen/spacing_mlarge"
-                                android:tint="@color/colorPrimaryTint"
+                                android:tint="@color/black"
                                 app:srcCompat="@drawable/ic_unlock" />
 
                             <View

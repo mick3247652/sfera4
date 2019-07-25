@@ -212,6 +212,7 @@
     <string name="label_items">posts</string>
     <string name="label_items2">posts</string>
     <string name="label_followers">followers</string>
+    <string name="label_followers2">followers</string>
     <string name="label_followings">following</string>
     <string name="label_likes">likes</string>
     <string name="label_online">Online</string>
