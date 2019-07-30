@@ -33,7 +33,7 @@ import ru.club.sfera.util.CustomRequest;
 
 public class SettingsFragment extends PreferenceFragment implements Constants {
 
-    private Preference logoutPreference, itemContactUs, aboutPreference, changePassword, itemServices, itemTerms, itemThanks, itemReferralsList, itemBlackList, itemNotifications, itemDeactivateAccount, itemPrivacy;
+    private Preference logoutPreference, itemContactUs, aboutPreference, changePassword, itemServices, itemTerms, itemThanks, itemBlackList, itemNotifications, itemDeactivateAccount, itemPrivacy;
     private CheckBoxPreference allowComments, allowMessages, allowPhotosComments;
 
     private ProgressDialog pDialog;
@@ -77,7 +77,6 @@ public class SettingsFragment extends PreferenceFragment implements Constants {
         itemTerms = findPreference("settings_terms");
         itemThanks = findPreference("settings_thanks");
         itemBlackList = findPreference("settings_blocked_list");
-        itemReferralsList = findPreference("settings_referrals_list");
         itemNotifications = findPreference("settings_push_notifications");
         itemPrivacy = findPreference("settings_privacy");
         itemContactUs = findPreference("settings_contact_us");
@@ -126,7 +125,7 @@ public class SettingsFragment extends PreferenceFragment implements Constants {
             }
         });
 
-        itemReferralsList.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        /*itemReferralsList.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 
             public boolean onPreferenceClick(Preference arg0) {
 
@@ -135,7 +134,7 @@ public class SettingsFragment extends PreferenceFragment implements Constants {
 
                 return true;
             }
-        });
+        });*/
 
         itemThanks.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 

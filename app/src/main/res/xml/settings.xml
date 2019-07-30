@@ -40,9 +40,9 @@
             android:enabled="true"
             android:summary="" />
 
-        <Preference
+        <!--<Preference
             android:key="settings_referrals_list"
-            android:title="@string/settings_view_referrals_list" />
+            android:title="@string/settings_view_referrals_list" />-->
 
         <Preference
             android:key="settings_blocked_list"
