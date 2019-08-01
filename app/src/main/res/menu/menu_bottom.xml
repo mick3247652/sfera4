@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Мои" android:icon="@drawable/ic_my_questions" android:id="@+id/my_question_id"/>
+    <item android:title="Все" android:icon="@drawable/ic_my_questions" android:id="@+id/all_question_id"/>
+
+</menu>

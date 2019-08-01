@@ -1,9 +1,9 @@
 buildscript {
     repositories {
-        maven { url 'https://plugins.gradle.org/m2/'}
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
-        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.1'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.2'
     }
 }
 apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         applicationId "ru.club.sfera"
-        manifestPlaceholders = [onesignal_app_id: "8d08320d-cfc4-4370-9b2b-f1f894123456",
+        manifestPlaceholders = [onesignal_app_id               : "8d08320d-cfc4-4370-9b2b-f1f894123456",
                                 // Project number pulled from dashboard, local value is ignored.
                                 onesignal_google_project_number: "REMOTE"]
         minSdkVersion 21
@@ -94,7 +94,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.karumi:dexter:4.2.0'
     implementation 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
-    implementation 'com.onesignal:OneSignal:3.10.5'
+    implementation 'com.onesignal:OneSignal:3.11.1'
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.google.android.exoplayer:exoplayer:$exoplayer_version"
@@ -102,7 +102,16 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     implementation 'com.google.android.ads.consent:consent-library:1.0.6'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
 
 }
 
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

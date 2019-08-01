@@ -20,6 +20,7 @@ import com.balysv.materialripple.MaterialRippleLayout;
 import ru.club.sfera.MarketApp.activities.MarketMainActivity;
 import ru.club.sfera.app.App;
 import ru.club.sfera.constants.Constants;
+import ru.club.sfera.questions.activity.QuestionsActivity;
 
 
 public class MenuFragment extends Fragment implements Constants {
@@ -31,6 +32,7 @@ public class MenuFragment extends Fragment implements Constants {
     private ImageView mNavGalleryIcon, mNavGroupsIcon, mNavFriendsIcon, mNavGuestsIcon, mNavMarketIcon, mNavNearbyIcon, mNavFavoritesIcon, mNavStreamIcon, mNavPopularIcon, mNavUpgradesIcon, mNavSettingsIcon;
 
     private MaterialRippleLayout mNavMusic, mNavGallery, mNavGroups, mNavStream, mNavFriends, mNavMarket, mNavGuests, mNavFavorites, mNavNearby, mNavPopular, mNavUpgrades, mNavSettings;
+    private MaterialRippleLayout mNavQuestions;
 
     public MenuFragment() {
         // Required empty public constructor
@@ -65,7 +67,7 @@ public class MenuFragment extends Fragment implements Constants {
         mNavUpgrades = (MaterialRippleLayout) rootView.findViewById(R.id.nav_upgrades);
         mNavSettings = (MaterialRippleLayout) rootView.findViewById(R.id.nav_settings);
         mNavMusic = (MaterialRippleLayout) rootView.findViewById(R.id.nav_music);
-
+        mNavQuestions = rootView.findViewById(R.id.nav_question);
         // Counters
 
         mFriendsIcon = (ImageView) rootView.findViewById(R.id.nav_friends_count_icon);
@@ -94,6 +96,11 @@ public class MenuFragment extends Fragment implements Constants {
 
             mNavUpgrades.setVisibility(View.GONE);
         }
+
+        mNavQuestions.setOnClickListener(v -> {
+            Intent i = new Intent(getActivity(), QuestionsActivity.class);
+            getActivity().startActivity(i);
+        });
 
         mNavGallery.setOnTouchListener(new View.OnTouchListener() {
 

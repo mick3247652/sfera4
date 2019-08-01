@@ -912,6 +912,10 @@
 
     <!--close message-->
     <string name="market_press_again_to_exit">Press again to exit app</string>
-
+    <string name="menu_questions_title">Вопросы</string>
+    <string name="menu_answers_title">Ответы</string>
+    <string name="card_footer_answers_text">всего ответов: </string>
+    <string name="enter_you_question">Ваш вопрос</string>
+    <string name="you_answer">Ваш ответ</string>
 
 </resources>

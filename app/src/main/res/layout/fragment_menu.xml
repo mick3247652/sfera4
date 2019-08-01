@@ -237,6 +237,39 @@
 
             <com.balysv.materialripple.MaterialRippleLayout
                 style="@style/RippleStyleBlack"
+                android:id="@+id/nav_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/spacing_medium"
+                    android:paddingTop="@dimen/spacing_medium"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle" >
+
+                    <ImageView
+                        android:id="@+id/nav_question_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="@dimen/spacing_medium"
+                        app:srcCompat="@drawable/ic_question" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_questions_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_dark" />
+
+                </LinearLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                style="@style/RippleStyleBlack"
                 android:id="@+id/nav_market"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

@@ -1,410 +1,411 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="ru.club.sfera">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="ru.club.sfera">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_CORSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_CORSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
 
-    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.location.gps"/>
 
     <application
-        android:name=".app.App"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:largeHeap="true"
-        android:theme="@style/MyMaterialTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".ViewVideoURLActivity"></activity>
-        <!-- AdMob App ID -->
+            android:name=".app.App"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:theme="@style/MyMaterialTheme"
+            android:usesCleartextTraffic="true">
+        <activity android:name=".questions.activity.AnswersActivity">
+        </activity>
+        <activity android:name=".questions.activity.QuestionsActivity"/>
+        <activity android:name=".ViewVideoURLActivity"/> <!-- AdMob App ID -->
         <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_app_id" />
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="@string/admob_app_id"/>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="${applicationId}.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
             <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths"/>
         </provider>
 
         <meta-data
-            android:name="android.app.default_searchable"
-            android:value="ru.ifsoft.network.SearchActivity" />
+                android:name="android.app.default_searchable"
+                android:value="ru.ifsoft.network.SearchActivity"/>
         <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
         <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id"/>
 
         <activity
-            android:name="com.facebook.FacebookActivity"
-            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name" />
+                android:name="com.facebook.FacebookActivity"
+                android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                android:label="@string/app_name"/>
         <activity
-            android:name="com.facebook.CustomTabActivity"
-            android:exported="true">
+                android:name="com.facebook.CustomTabActivity"
+                android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
 
-                <data android:scheme="@string/fb_login_protocol_scheme" />
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".AppActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
+                android:name=".AppActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.google.android.gms.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
+                android:name="com.google.android.gms.ads.AdActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:theme="@android:style/Theme.Translucent"/>
 
         <meta-data
-            android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_action_push_notification" />
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/ic_action_push_notification"/>
         <meta-data
-            android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorAccent" />
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorAccent"/>
         <meta-data
-            android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="@string/default_notification_channel_id" />
+                android:name="com.google.firebase.messaging.default_notification_channel_id"
+                android:value="@string/default_notification_channel_id"/>
 
         <service android:name=".service.MyFcmListenerService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
         <service
-            android:name=".service.MyService"
-            android:exported="false" />
+                android:name=".service.MyService"
+                android:exported="false"/>
 
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".LoginActivity"
+                android:label="@string/title_activity_login"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".SignupActivity"
-            android:label="@string/title_activity_signup"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".SignupActivity"
+                android:label="@string/title_activity_signup"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation"
-            android:label="@string/title_activity_feeds"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".MainActivity"
+                android:configChanges="orientation"
+                android:label="@string/title_activity_feeds"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".RecoveryActivity"
-            android:label="@string/title_activity_recovery"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".RecoveryActivity"
+                android:label="@string/title_activity_recovery"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" />
+                android:name=".SettingsActivity"
+                android:label="@string/title_activity_settings"/>
         <activity
-            android:name=".WebViewActivity"
-            android:label="@string/title_activity_web_view" />
+                android:name=".WebViewActivity"
+                android:label="@string/title_activity_web_view"/>
         <activity
-            android:name=".ChangePasswordActivity"
-            android:label="@string/title_activity_change_password"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".ChangePasswordActivity"
+                android:label="@string/title_activity_change_password"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".ServicesActivity"
-            android:label="@string/title_activity_services" />
+                android:name=".ServicesActivity"
+                android:label="@string/title_activity_services"/>
         <activity
-            android:name=".NewItemActivity"
-            android:label="@string/title_activity_new_item" />
+                android:name=".NewItemActivity"
+                android:label="@string/title_activity_new_item"/>
         <activity
-            android:name=".ViewItemActivity"
-            android:label="@string/title_activity_view_item"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".ViewItemActivity"
+                android:label="@string/title_activity_view_item"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".ProfileActivity"
-            android:configChanges="orientation"
-            android:label="@string/title_activity_profile" />
+                android:name=".ProfileActivity"
+                android:configChanges="orientation"
+                android:label="@string/title_activity_profile"/>
         <activity
-            android:name=".SearchActivity"
-            android:label="@string/title_activity_search">
+                android:name=".SearchActivity"
+                android:label="@string/title_activity_search">
             <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+                    android:name="android.app.searchable"
+                    android:resource="@xml/searchable"/>
         </activity>
         <activity
-            android:name=".NotificationsActivity"
-            android:label="@string/title_activity_notifications" />
+                android:name=".NotificationsActivity"
+                android:label="@string/title_activity_notifications"/>
         <activity
-            android:name=".PhotoViewActivity"
-            android:label="@string/title_activity_photo_view"
-            android:theme="@style/PhotoViewTheme" />
+                android:name=".PhotoViewActivity"
+                android:label="@string/title_activity_photo_view"
+                android:theme="@style/PhotoViewTheme"/>
         <activity
-            android:name=".VideoViewActivity"
-            android:label="@string/title_activity_video_view"
-            android:theme="@style/PhotoViewTheme" />
+                android:name=".VideoViewActivity"
+                android:label="@string/title_activity_video_view"
+                android:theme="@style/PhotoViewTheme"/>
         <activity
-            android:name=".HashtagsActivity"
-            android:label="@string/title_activity_hashtags" />
+                android:name=".HashtagsActivity"
+                android:label="@string/title_activity_hashtags"/>
         <activity
-            android:name=".FollowersActivity"
-            android:label="@string/title_activity_followers" />
+                android:name=".FollowersActivity"
+                android:label="@string/title_activity_followers"/>
         <activity
-            android:name=".LikesActivity"
-            android:label="@string/title_activity_likes" />
+                android:name=".LikesActivity"
+                android:label="@string/title_activity_likes"/>
         <activity
-            android:name=".LikersActivity"
-            android:label="@string/title_activity_likers" />
+                android:name=".LikersActivity"
+                android:label="@string/title_activity_likers"/>
         <activity
-            android:name=".AccountSettingsActivity"
-            android:label="@string/title_activity_account_settings"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".AccountSettingsActivity"
+                android:label="@string/title_activity_account_settings"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".BlackListActivity"
-            android:label="@string/title_activity_black_list" />
+                android:name=".BlackListActivity"
+                android:label="@string/title_activity_black_list"/>
         <activity
-            android:name=".DialogsActivity"
-            android:label="@string/title_activity_dialogs" />
+                android:name=".DialogsActivity"
+                android:label="@string/title_activity_dialogs"/>
         <activity
-            android:name=".ChatActivity"
-            android:label="@string/title_activity_chat"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".ChatActivity"
+                android:label="@string/title_activity_chat"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".NotificationsSettingsActivity"
-            android:label="@string/title_activity_notifications_settings" />
+                android:name=".NotificationsSettingsActivity"
+                android:label="@string/title_activity_notifications_settings"/>
         <activity
-            android:name=".PrivacySettingsActivity"
-            android:label="@string/title_activity_privacy_settings" />
+                android:name=".PrivacySettingsActivity"
+                android:label="@string/title_activity_privacy_settings"/>
         <activity
-            android:name=".FavoritesActivity"
-            android:label="@string/title_activity_favorites"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".FavoritesActivity"
+                android:label="@string/title_activity_favorites"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".SupportActivity"
-            android:label="@string/title_activity_support"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".SupportActivity"
+                android:label="@string/title_activity_support"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".LocationActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:label="@string/title_activity_location"
-            android:screenOrientation="portrait"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".LocationActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:label="@string/title_activity_location"
+                android:screenOrientation="portrait"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".DeactivateActivity"
-            android:label="@string/title_activity_deactivate"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".DeactivateActivity"
+                android:label="@string/title_activity_deactivate"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".AddPhotoActivity"
-            android:label="@string/title_activity_new_photo"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".AddPhotoActivity"
+                android:label="@string/title_activity_new_photo"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".GalleryActivity"
-            android:label="@string/title_activity_gallery"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".GalleryActivity"
+                android:label="@string/title_activity_gallery"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".VideoGalleryActivity"
-            android:label="@string/title_activity_video_gallery"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".VideoGalleryActivity"
+                android:label="@string/title_activity_video_gallery"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".AddVideoActivity"
-            android:label="@string/title_activity_new_video"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".AddVideoActivity"
+                android:label="@string/title_activity_new_video"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".ViewImageActivity"
-            android:label="@string/title_activity_view_image"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".ViewImageActivity"
+                android:label="@string/title_activity_view_image"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".ViewVideoActivity"
-            android:label="@string/title_activity_view_video"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".ViewVideoActivity"
+                android:label="@string/title_activity_view_video"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".ManagedGroupsActivity"
-            android:label="@string/title_activity_managed_groups"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".ManagedGroupsActivity"
+                android:label="@string/title_activity_managed_groups"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".NewGroupActivity"
-            android:label="@string/title_activity_new_group"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".NewGroupActivity"
+                android:label="@string/title_activity_new_group"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".GroupActivity"
-            android:label="@string/title_activity_group"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".GroupActivity"
+                android:label="@string/title_activity_group"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".GroupSettingsActivity"
-            android:label="@string/title_activity_settings"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".GroupSettingsActivity"
+                android:label="@string/title_activity_settings"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".GroupSearchActivity"
-            android:label="@string/title_activity_search">
+                android:name=".GroupSearchActivity"
+                android:label="@string/title_activity_search">
             <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+                    android:name="android.app.searchable"
+                    android:resource="@xml/searchable"/>
         </activity>
         <activity
-            android:name=".BalanceActivity"
-            android:label="@string/title_activity_balance"
-            android:screenOrientation="portrait"
-            android:theme="@style/MyMaterialTheme"></activity>
+                android:name=".BalanceActivity"
+                android:label="@string/title_activity_balance"
+                android:screenOrientation="portrait"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".SendGiftActivity"
-            android:label="@string/title_activity_send_gift"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".SendGiftActivity"
+                android:label="@string/title_activity_send_gift"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".GiftsActivity"
-            android:label="@string/title_activity_gifts"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".GiftsActivity"
+                android:label="@string/title_activity_gifts"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".FriendsActivity"
-            android:label="@string/title_activity_friends"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".FriendsActivity"
+                android:label="@string/title_activity_friends"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".WelcomeActivity"
-            android:label="@string/title_activity_welcome" />
+                android:name=".WelcomeActivity"
+                android:label="@string/title_activity_welcome"/>
         <activity
-            android:name=".ReferralsActivity"
-            android:label="@string/title_activity_referrals"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".ReferralsActivity"
+                android:label="@string/title_activity_referrals"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".MarketNewItemActivity"
-            android:label="@string/title_activity_market_new_item"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".MarketNewItemActivity"
+                android:label="@string/title_activity_market_new_item"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".MarketViewItemActivity"
-            android:label="@string/title_activity_market_view_item"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".MarketViewItemActivity"
+                android:label="@string/title_activity_market_view_item"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".MarketMyItemsActivity"
-            android:label="@string/title_activity_market_my_items"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".MarketMyItemsActivity"
+                android:label="@string/title_activity_market_my_items"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".ViewYouTubeVideoActivity"
-            android:label="@string/title_activity_view_youtube_video"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".ViewYouTubeVideoActivity"
+                android:label="@string/title_activity_view_youtube_video"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".MarketActivity"
-            android:label="@string/title_activity_market"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".MarketActivity"
+                android:label="@string/title_activity_market"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".StreamActivity"
-            android:label="@string/title_activity_stream"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".StreamActivity"
+                android:label="@string/title_activity_stream"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".GuestsActivity"
-            android:label="@string/title_activity_guests"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".GuestsActivity"
+                android:label="@string/title_activity_guests"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".GroupsActivity"
-            android:label="@string/title_activity_groups"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".GroupsActivity"
+                android:label="@string/title_activity_groups"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".NearbyActivity"
-            android:label="@string/title_activity_nearby"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".NearbyActivity"
+                android:label="@string/title_activity_nearby"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".UpgradesActivity"
-            android:label="@string/title_activity_upgrades"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".UpgradesActivity"
+                android:label="@string/title_activity_upgrades"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".PopularActivity"
-            android:label="@string/title_activity_popular"
-            android:theme="@style/MyMaterialTheme" />
+                android:name=".PopularActivity"
+                android:label="@string/title_activity_popular"
+                android:theme="@style/MyMaterialTheme"/>
         <activity
-            android:name=".RegisterActivity"
-            android:label="@string/title_activity_signup" />
-        <activity android:name=".MediaViewerActivity" />
-
-
-        <!--<activity
+                android:name=".RegisterActivity"
+                android:label="@string/title_activity_signup"/>
+        <activity android:name=".MediaViewerActivity"/>
+        <!--
+<activity
             android:name="ru.club.sfera.MarketApp.activities.ActivitySplash"
             android:configChanges="orientation|keyboardHidden|screenSize">
-        </activity>-->
-        <activity
-            android:name="ru.club.sfera.MarketApp.activities.MarketMainActivity"
-            android:label="@string/title_activity_market"
-            android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
+        -->
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityUserLogin"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".MarketApp.activities.MarketMainActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:label="@string/title_activity_market"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityUserRegister"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".MarketApp.activities.ActivityUserLogin"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityProfile"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateHidden" />
+                android:name=".MarketApp.activities.ActivityUserRegister"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityForgotPassword"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait" />
+                android:name=".MarketApp.activities.ActivityProfile"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityFullScreenImage"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityForgotPassword"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:screenOrientation="portrait"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityComments"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityFullScreenImage"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivitySendComment"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityComments"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityUpdateComment"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivitySendComment"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityReplyComment"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityUpdateComment"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityNewsDetail"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityReplyComment"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityCategoryDetails"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityNewsDetail"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityPrivacyPolicy"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityCategoryDetails"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityYoutubePlayer"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityPrivacyPolicy"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityVideoPlayer"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityYoutubePlayer"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityWebView"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityVideoPlayer"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityWebViewImage"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityWebView"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityOneSignalDetail"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityWebViewImage"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivityFCMDetail"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+                android:name=".MarketApp.activities.ActivityOneSignalDetail"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-            android:name="ru.club.sfera.MarketApp.activities.ActivitySearch"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="stateVisible" />
+                android:name=".MarketApp.activities.ActivityFCMDetail"
+                android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+                android:name=".MarketApp.activities.ActivitySearch"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:windowSoftInputMode="stateVisible"/>
         <!--
                 <meta-data
                     android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -434,12 +435,11 @@
                     <intent-filter>
                         <action android:name="com.onesignal.NotificationExtender" />
                     </intent-filter>
-                </service>-->
-
+                </service>
+        -->
         <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
-
+                android:name="org.apache.http.legacy"
+                android:required="false"/>
     </application>
 
 </manifest>

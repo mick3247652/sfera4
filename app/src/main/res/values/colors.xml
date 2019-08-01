@@ -18,7 +18,7 @@
 
     <color name="grey_3">#f7f7f7</color>
     <color name="grey_5">#f2f2f2</color>
-    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_10">#E6E6E6</color>
     <color name="grey_20">#cccccc</color>
     <color name="grey_40">#999999</color>
     <color name="grey_60">#666666</color>
@@ -75,7 +75,7 @@
     <color name="actionbar_top_bg">#1C6399</color>
     <color name="gray">#808285</color>
     <color name="black">#000000</color>
-    <color name="answer_text">#ff222222</color>
+    <color name="answer_text">#222222</color>
     <color name="gray_bg">#E5E5E5</color>
     <color name="signup_button_text">#3D678C</color>
     <color name="gray_text">#757575</color>
