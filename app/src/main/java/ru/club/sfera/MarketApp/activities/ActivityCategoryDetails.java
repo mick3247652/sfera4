@@ -33,7 +33,6 @@ import ru.club.sfera.MarketApp.Config;
 import ru.club.sfera.R;
 import ru.club.sfera.MarketApp.adapter.AdapterRecent;
 import ru.club.sfera.MarketApp.callbacks.CallbackCategoryDetails;
-import ru.club.sfera.MarketApp.fcm.NotificationUtils;
 import ru.club.sfera.MarketApp.models.Category;
 import ru.club.sfera.MarketApp.models.News;
 import ru.club.sfera.MarketApp.rests.ApiInterface;
@@ -468,7 +467,7 @@ public class ActivityCategoryDetails extends AppCompatActivity {
         super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter(Constant.REGISTRATION_COMPLETE));
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter(Constant.PUSH_NOTIFICATION));
-        NotificationUtils.clearNotifications(getApplicationContext());
+        //NotificationUtils.clearNotifications(getApplicationContext());
     }
 
     @Override

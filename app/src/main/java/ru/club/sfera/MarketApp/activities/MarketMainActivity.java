@@ -39,12 +39,7 @@ import ru.club.sfera.MarketApp.Config;
 import ru.club.sfera.BuildConfig;
 import ru.club.sfera.R;
 import ru.club.sfera.MarketApp.callbacks.CallbackUser;
-import ru.club.sfera.MarketApp.fcm.NotificationUtils;
 import ru.club.sfera.MarketApp.fragment.FragmentCategory;
-import ru.club.sfera.MarketApp.fragment.FragmentFavorite;
-import ru.club.sfera.MarketApp.fragment.FragmentProfile;
-import ru.club.sfera.MarketApp.fragment.FragmentRecent;
-import ru.club.sfera.MarketApp.fragment.FragmentVideo;
 import ru.club.sfera.MarketApp.models.Setting;
 import ru.club.sfera.MarketApp.models.User;
 import ru.club.sfera.MarketApp.rests.ApiInterface;
@@ -545,7 +540,7 @@ public class MarketMainActivity extends AppCompatActivity {
         super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter(Constant.REGISTRATION_COMPLETE));
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter(Constant.PUSH_NOTIFICATION));
-        NotificationUtils.clearNotifications(getApplicationContext());
+        //NotificationUtils.clearNotifications(getApplicationContext());
     }
 
     @Override

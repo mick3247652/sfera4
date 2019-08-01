@@ -397,46 +397,13 @@
                 android:name=".MarketApp.activities.ActivityWebViewImage"
                 android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
-                android:name=".MarketApp.activities.ActivityOneSignalDetail"
-                android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity
                 android:name=".MarketApp.activities.ActivityFCMDetail"
                 android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity
                 android:name=".MarketApp.activities.ActivitySearch"
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:windowSoftInputMode="stateVisible"/>
-        <!--
-                <meta-data
-                    android:name="com.google.android.gms.ads.APPLICATION_ID"
-                    android:value="@string/market_admob_app_id" />
 
-                <meta-data
-                    android:name="com.google.android.gms.version"
-                    android:value="@integer/google_play_services_version" />
-
-
-                <service android:name="ru.club.sfera.MarketApp.fcm.MyFirebaseMessagingService">
-                    <intent-filter>
-                        <action android:name="com.google.firebase.MESSAGING_EVENT" />
-                    </intent-filter>
-                </service>
-
-                <service android:name="ru.club.sfera.MarketApp.fcm.MyFirebaseInstanceIDService">
-                    <intent-filter>
-                        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-                    </intent-filter>
-                </service>
-
-                <service
-                    android:name="ru.club.sfera.MarketApp.utils.NotificationExtenderExample"
-                    android:exported="false"
-                    android:permission="android.permission.BIND_JOB_SERVICE">
-                    <intent-filter>
-                        <action android:name="com.onesignal.NotificationExtender" />
-                    </intent-filter>
-                </service>
-        -->
         <uses-library
                 android:name="org.apache.http.legacy"
                 android:required="false"/>

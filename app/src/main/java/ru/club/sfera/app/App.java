@@ -22,7 +22,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 import com.google.firebase.FirebaseApp;
-import com.onesignal.OneSignal;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -73,10 +72,7 @@ public class App extends Application implements Constants {
 
         this.readData();
 
-        OneSignal.startInit(this)
-                .unsubscribeWhenNotificationsAreDisabled(true)
-                .init();
-	}
+ 	}
 
     public void setLocation() {
 

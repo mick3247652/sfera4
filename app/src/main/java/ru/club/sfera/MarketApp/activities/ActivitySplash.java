@@ -49,11 +49,6 @@ public class ActivitySplash extends AppCompatActivity {
 
                             finish();
                         }
-                    } else {
-                        Intent intent = new Intent(getApplicationContext(), ActivityOneSignalDetail.class);
-                        intent.putExtra("id", nid);
-                        startActivity(intent);
-                        finish();
                     }
                 }
             }

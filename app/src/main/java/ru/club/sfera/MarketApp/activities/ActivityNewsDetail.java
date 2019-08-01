@@ -36,7 +36,6 @@ import android.widget.TextView;
 
 import ru.club.sfera.MarketApp.Config;
 import ru.club.sfera.R;
-import ru.club.sfera.MarketApp.fcm.NotificationUtils;
 import ru.club.sfera.MarketApp.models.News;
 import ru.club.sfera.MarketApp.utils.AppBarLayoutBehavior;
 import ru.club.sfera.MarketApp.utils.Constant;
@@ -733,7 +732,7 @@ public class ActivityNewsDetail extends AppCompatActivity {
         super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter(Constant.REGISTRATION_COMPLETE));
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter(Constant.PUSH_NOTIFICATION));
-        NotificationUtils.clearNotifications(getApplicationContext());
+        //NotificationUtils.clearNotifications(getApplicationContext());
     }
 
     @Override
