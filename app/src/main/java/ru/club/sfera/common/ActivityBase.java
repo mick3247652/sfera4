@@ -2,7 +2,7 @@ package ru.club.sfera.common;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import ru.club.sfera.R;
 import ru.club.sfera.constants.Constants;

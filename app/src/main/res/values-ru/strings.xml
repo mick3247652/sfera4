@@ -918,4 +918,30 @@
     <string name="enter_you_question">Ваш вопрос</string>
     <string name="you_answer">Ваш ответ</string>
 
+    <string name="telegraph_name">Блог</string>
+    <string name="telegraph_share">Добавить в ленту</string>
+    <string name="telegraph_about">О Программе</string>
+    <string name="telegraph_bookmarks">Закладки</string>
+    <string name="telegraph_bookmark_this">Добавить в закладки</string>
+    <string name="telegraph_delete_bookmark">Удалить закладку</string>
+    <string name="telegraph_create">Новая</string>
+    <string name="telegraph_title_question">Заголовок?</string>
+    <string name="telegraph_title_hint">Пост #1</string>
+    <string name="telegraph_delete">Удалить</string>
+    <string name="telegraph_delete_question">Вы на самом деле хотите удалить это?</string>
+    <string name="telegraph_publish">Опубликовать</string>
+    <string name="telegraph_edit">Редактировать</string>
+    <string name="telegraph_try_edit">Попробуйте отредактировать</string>
+    <string name="telegraph_error">Ошибка</string>
+    <string name="telegraph_error_desc">Произошло что-то неожиданное!</string>
+    <string name="telegraph_published">Опубликованные посты</string>
+    <string name="telegraph_name_question">Ваше имя?</string>
+    <string name="telegraph_name_hint">Писатель</string>
+    <string name="telegraph_login_failed">Ошибка входа. Попробуйте еще!</string>
+    <string name="telegraph_success">Получилось</string>
+    <string name="telegraph_login_success">Вы успешно вошли!</string>
+    <string name="telegraph_login">Вход</string>
+    <string name="telegraph_login_desc">Open the Telegraph bot in Telegram, select \"Login as * on this device\" and choose Teleposter.</string>
+    <string name="telegraph_open">Открыть</string>
+
 </resources>

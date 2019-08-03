@@ -1,10 +1,10 @@
 package ru.club.sfera.questions.fragment
 
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +24,7 @@ class AllQuestionsFragment : Fragment() {
 
         val recycler = v.questionsList
         recycler.adapter = model.allQuestionRecyclerAdapter
-        recycler.layoutManager = LinearLayoutManager(activity)
+        recycler.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
 
         return v
     }

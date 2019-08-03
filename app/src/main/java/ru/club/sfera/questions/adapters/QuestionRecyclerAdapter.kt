@@ -1,8 +1,8 @@
 package ru.club.sfera.questions.adapters
 
 import android.content.Intent
-import android.support.v7.widget.CardView
-import android.support.v7.widget.RecyclerView
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -17,7 +17,7 @@ import ru.club.sfera.questions.activity.AnswersActivity
 import ru.club.sfera.questions.model.Question
 
 
-class QuestionRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class QuestionRecyclerAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<androidx.recyclerview.widget.RecyclerView.ViewHolder>() {
     private var questions: List<Question>? = null
     internal var imageLoader: ImageLoader? = App.getInstance().imageLoader
 
@@ -31,17 +31,17 @@ class QuestionRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() 
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): RecyclerView.ViewHolder {
-        val v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_question, viewGroup, false) as CardView
-        return object : RecyclerView.ViewHolder(v) {}
+    override fun onCreateViewHolder(viewGroup: ViewGroup, p1: Int): androidx.recyclerview.widget.RecyclerView.ViewHolder {
+        val v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_question, viewGroup, false) as androidx.cardview.widget.CardView
+        return object : androidx.recyclerview.widget.RecyclerView.ViewHolder(v) {}
 
     }
 
     override fun getItemCount() = questions?.size ?: 0
 
-    override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: androidx.recyclerview.widget.RecyclerView.ViewHolder, position: Int) {
         questions?: return
-        val v = viewHolder.itemView as CardView
+        val v = viewHolder.itemView as androidx.cardview.widget.CardView
         val photo = v.findViewById<CircularImageView?>(R.id.questionUserPhoto)
         val name = v.findViewById<TextView>(R.id.questionUserName)
         val questionText = v.findViewById<TextView>(R.id.questionText)

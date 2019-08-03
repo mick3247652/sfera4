@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:id="@+id/contentScreen" >
 
-            <android.support.v4.widget.SwipeRefreshLayout
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/contentContainer"
                 android:layout_height="0dp"
@@ -42,7 +42,7 @@
                     android:background="@color/listViewDivider"
                     android:id="@+id/listView" />
 
-            </android.support.v4.widget.SwipeRefreshLayout>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
             <LinearLayout
                 android:orientation="vertical"

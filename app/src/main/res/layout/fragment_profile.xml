@@ -10,12 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <android.support.v4.widget.SwipeRefreshLayout
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/profileRefreshLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.v4.widget.NestedScrollView
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/nestedScrollView"
@@ -608,7 +608,7 @@
 
                     </LinearLayout>
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/friendsSpotlight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -672,7 +672,7 @@
 
                             </LinearLayout>
 
-                            <android.support.v7.widget.RecyclerView
+                            <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/friendsSpotlightRecyclerView"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/friends_spotlight_item_size" />
@@ -680,9 +680,9 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/gallerySpotlight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -746,7 +746,7 @@
 
                             </LinearLayout>
 
-                            <android.support.v7.widget.RecyclerView
+                            <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/gallerySpotlightRecyclerView"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/gallery_spotlight_item_size" />
@@ -754,7 +754,7 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <View
                         android:layout_width="match_parent"
@@ -878,7 +878,7 @@
                         android:layout_height="1px"
                         android:background="@color/gray_border" />
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -887,9 +887,9 @@
 
                 </LinearLayout>
 
-            </android.support.v4.widget.NestedScrollView>
+            </androidx.core.widget.NestedScrollView>
 
-        </android.support.v4.widget.SwipeRefreshLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -956,7 +956,7 @@
 
     </RelativeLayout>
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/bottom_sheet_parent"
@@ -970,6 +970,6 @@
             android:layout_height="wrap_content"
             app:layout_behavior="@string/bottom_sheet_behavior" />
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>

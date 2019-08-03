@@ -35,6 +35,7 @@ allprojects {
             name 'Google'
         }
         maven { url 'https://google.bintray.com/exoplayer/' }
+        maven { url "https://jitpack.io" }
     }
 }
 

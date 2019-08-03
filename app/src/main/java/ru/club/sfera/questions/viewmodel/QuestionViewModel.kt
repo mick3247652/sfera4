@@ -1,6 +1,6 @@
 package ru.club.sfera.questions.viewmodel
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import android.util.Log
 import retrofit2.Call
 import retrofit2.Callback

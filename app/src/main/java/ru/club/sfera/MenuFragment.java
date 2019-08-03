@@ -3,7 +3,7 @@ package ru.club.sfera;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,6 +21,7 @@ import ru.club.sfera.MarketApp.activities.MarketMainActivity;
 import ru.club.sfera.app.App;
 import ru.club.sfera.constants.Constants;
 import ru.club.sfera.questions.activity.QuestionsActivity;
+import ru.club.sfera.telegraph.TelegraphActivity;
 
 
 public class MenuFragment extends Fragment implements Constants {
@@ -32,7 +33,7 @@ public class MenuFragment extends Fragment implements Constants {
     private ImageView mNavGalleryIcon, mNavGroupsIcon, mNavFriendsIcon, mNavGuestsIcon, mNavMarketIcon, mNavNearbyIcon, mNavFavoritesIcon, mNavStreamIcon, mNavPopularIcon, mNavUpgradesIcon, mNavSettingsIcon;
 
     private MaterialRippleLayout mNavMusic, mNavGallery, mNavGroups, mNavStream, mNavFriends, mNavMarket, mNavGuests, mNavFavorites, mNavNearby, mNavPopular, mNavUpgrades, mNavSettings;
-    private MaterialRippleLayout mNavQuestions;
+    private MaterialRippleLayout mNavQuestions, mNavBlog;
 
     public MenuFragment() {
         // Required empty public constructor
@@ -68,6 +69,7 @@ public class MenuFragment extends Fragment implements Constants {
         mNavSettings = (MaterialRippleLayout) rootView.findViewById(R.id.nav_settings);
         mNavMusic = (MaterialRippleLayout) rootView.findViewById(R.id.nav_music);
         mNavQuestions = rootView.findViewById(R.id.nav_question);
+        mNavBlog = rootView.findViewById(R.id.nav_blog);
         // Counters
 
         mFriendsIcon = (ImageView) rootView.findViewById(R.id.nav_friends_count_icon);
@@ -127,65 +129,51 @@ public class MenuFragment extends Fragment implements Constants {
             }
         });
 
-        mNavMusic.setOnClickListener(new View.OnClickListener() {
+        mNavMusic.setOnClickListener(view -> {
 
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(getActivity(), WebViewActivity.class);
-                i.putExtra("url", "https://muzofond.fm");
-                i.putExtra("title", getActivity().getResources().getString(R.string.nav_music));
-                getActivity().startActivity(i);
-            }
+            Intent i = new Intent(getActivity(), WebViewActivity.class);
+            i.putExtra("url", "https://muzofond.fm");
+            i.putExtra("title", getActivity().getResources().getString(R.string.nav_music));
+            getActivity().startActivity(i);
         });
 
-        mNavGroups.setOnTouchListener(new View.OnTouchListener() {
+        mNavBlog.setOnClickListener(view -> {
 
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-
-                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-
-                    animateIcon(mNavGroupsIcon);
-                }
-
-                return false;
-            }
+            Intent i = new Intent(getActivity(), TelegraphActivity.class);
+            getActivity().startActivity(i);
         });
 
-        mNavGroups.setOnClickListener(new View.OnClickListener() {
+        mNavGroups.setOnTouchListener((view, motionEvent) -> {
 
-            @Override
-            public void onClick(View view) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
 
-                Intent i = new Intent(getActivity(), GroupsActivity.class);
-                startActivity(i);
+                animateIcon(mNavGroupsIcon);
             }
+
+            return false;
         });
 
-        mNavFriends.setOnTouchListener(new View.OnTouchListener() {
+        mNavGroups.setOnClickListener(view -> {
 
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-
-                if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-
-                    animateIcon(mNavFriendsIcon);
-                }
-
-                return false;
-            }
+            Intent i = new Intent(getActivity(), GroupsActivity.class);
+            startActivity(i);
         });
 
-        mNavFriends.setOnClickListener(new View.OnClickListener() {
+        mNavFriends.setOnTouchListener((view, motionEvent) -> {
 
-            @Override
-            public void onClick(View view) {
+            if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
 
-                Intent i = new Intent(getActivity(), FriendsActivity.class);
-                i.putExtra("profileId", App.getInstance().getId());
-                startActivity(i);
+                animateIcon(mNavFriendsIcon);
             }
+
+            return false;
+        });
+
+        mNavFriends.setOnClickListener(view -> {
+
+            Intent i = new Intent(getActivity(), FriendsActivity.class);
+            i.putExtra("profileId", App.getInstance().getId());
+            startActivity(i);
         });
 
         mNavGuests.setOnTouchListener(new View.OnTouchListener() {

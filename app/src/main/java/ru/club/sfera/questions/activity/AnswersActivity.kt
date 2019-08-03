@@ -2,9 +2,9 @@ package ru.club.sfera.questions.activity
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -70,7 +70,7 @@ class AnswersActivity : AppCompatActivity() {
 
     private fun configRecycler(){
         answerRecycler.adapter = adapter
-        answerRecycler.layoutManager = LinearLayoutManager(this)
+        answerRecycler.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
     }
 
     private fun loadAnswers(){

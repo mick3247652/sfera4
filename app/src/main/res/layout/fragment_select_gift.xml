@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:id="@+id/container_body" >
 
-        <android.support.v4.widget.SwipeRefreshLayout
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/container_items"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -31,7 +31,7 @@
                 android:dividerHeight="8dp"
                 android:background="@color/listViewDivider" />
 
-        </android.support.v4.widget.SwipeRefreshLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </LinearLayout>
 

@@ -1082,4 +1082,30 @@
     <string name="enter_you_question">Enter you question</string>
     <string name="you_answer">Enter you answer</string>
 
+    <string name="telegraph_name">Блог</string>
+    <string name="telegraph_share">Share</string>
+    <string name="telegraph_about">About</string>
+    <string name="telegraph_bookmarks">Bookmarks</string>
+    <string name="telegraph_bookmark_this">Bookmark this</string>
+    <string name="telegraph_delete_bookmark">Delete Bookmark</string>
+    <string name="telegraph_create">New</string>
+    <string name="telegraph_title_question">Title?</string>
+    <string name="telegraph_title_hint">Awesome Post #1</string>
+    <string name="telegraph_delete">Delete</string>
+    <string name="telegraph_delete_question">Do you really want to delete this?</string>
+    <string name="telegraph_publish">Publish</string>
+    <string name="telegraph_edit">Edit</string>
+    <string name="telegraph_try_edit">Try to edit</string>
+    <string name="telegraph_error">Error</string>
+    <string name="telegraph_error_desc">Something unexpected happened!</string>
+    <string name="telegraph_published">Published posts</string>
+    <string name="telegraph_name_question">Your name?</string>
+    <string name="telegraph_name_hint">Awesome Writer</string>
+    <string name="telegraph_login_failed">Login failed. Try again!</string>
+    <string name="telegraph_success">Success</string>
+    <string name="telegraph_login_success">You successfully logged in!</string>
+    <string name="telegraph_login">Login</string>
+    <string name="telegraph_login_desc">Open the Telegraph bot in Telegram, select \"Login as * on this device\" and choose Teleposter.</string>
+    <string name="telegraph_open">Open</string>
+
 </resources>

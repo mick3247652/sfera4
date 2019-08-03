@@ -3,7 +3,7 @@ package ru.club.sfera;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 
 import ru.club.sfera.common.ActivityBase;

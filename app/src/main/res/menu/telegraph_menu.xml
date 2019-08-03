@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:id="@+id/create"
+		android:title="@string/telegraph_create"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/publish"
+		android:title="@string/telegraph_publish"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/edit"
+		android:title="@string/telegraph_edit"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/try_edit"
+		android:title="@string/telegraph_try_edit"
+		app:showAsAction="ifRoom" />
+	<item
+		android:id="@+id/bookmark"
+		android:title="@string/telegraph_bookmark_this"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/bookmarks"
+		android:title="@string/telegraph_bookmarks"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/delete_bookmark"
+		android:title="@string/telegraph_delete_bookmark"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/published"
+		android:title="@string/telegraph_published"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/share"
+		android:title="@string/telegraph_share"
+		app:showAsAction="never" />
+	<item
+			android:id="@+id/login"
+			android:title="@string/telegraph_login"
+			app:showAsAction="never" android:visible="false"/>
+	<item
+			android:id="@+id/about"
+			android:title="@string/telegraph_about"
+			app:showAsAction="never" android:visible="false"/>
+</menu>

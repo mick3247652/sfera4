@@ -105,7 +105,7 @@
                 android:id="@+id/emojis_backspace"
                 android:src="@drawable/sym_keyboard_delete_holo_dark"/>
     </LinearLayout>
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:layout_below="@id/emojis_tab"
         android:id="@+id/emojis_pager"
         android:layout_width="match_parent"

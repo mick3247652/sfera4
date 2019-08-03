@@ -1,8 +1,8 @@
 package ru.club.sfera.questions.activity
 
 import android.annotation.SuppressLint
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_questions.*
@@ -10,7 +10,7 @@ import ru.club.sfera.R
 import ru.club.sfera.questions.adapters.ViewPagerAdapter
 import ru.club.sfera.questions.fragment.AllQuestionsFragment
 import ru.club.sfera.questions.fragment.MyQuestionsFragment
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 import android.util.Log
 import android.view.View
 import ru.club.sfera.questions.viewmodel.QuestionViewModel
